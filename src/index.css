@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'SystemNumbers';
+  src: local('Arial');
+  unicode-range: U+0030-0039, U+0660-0669;
+}
+
+@theme {
+  --color-primary: #003F7A;
+  --color-secondary: #0056A8;
+  --color-accent: #007BFF;
+  --color-accent-light: #4DA3FF;
+  --color-silver: #E6F0FA;
+  
+  --color-gray-50: #FFFFFF;
+  --color-gray-100: #F0F8FF;
+  --color-gray-200: #CCE5FF;
+  --color-gray-300: #99CCFF;
+  --color-gray-400: #66B2FF;
+  --color-gray-500: #3399FF;
+  --color-gray-600: #007BFF;
+  --color-gray-700: #0056A8;
+  --color-gray-800: #003F7A;
+  --color-gray-900: #00284D;
+
+  --color-gray-light: #FFFFFF;
+  --color-gray-dark: #003F7A;
+
+  --font-sans: "SystemNumbers", "stc", system-ui, sans-serif;
+  --font-display: "SystemNumbers", "stc", system-ui, sans-serif;
+
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-float: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+html {
+  font-size: 90%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 100% !important;
+}
+
+body {
+  background-color: var(--color-gray-light);
+  color: var(--color-gray-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.glass-panel {
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Scrollbar customization for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-light);
+}
