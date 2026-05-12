@@ -23,12 +23,10 @@ export default function WhyUs() {
               viewport={{ once: true }}
               className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
             >
-              <motion.img 
+              <img 
                 src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" 
                 alt="Industrial Engineering Background" 
                 className="w-full h-auto object-cover min-h-[250px] md:min-h-[400px] lg:min-h-[500px]"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 15, ease: "linear", repeat: Infinity }}
               />
               <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
             </motion.div>

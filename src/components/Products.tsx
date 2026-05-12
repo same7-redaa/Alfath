@@ -1,7 +1,34 @@
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
+import { useRef } from 'react';
 
 export default function Products() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const isHorizontal = useRef<boolean | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    isHorizontal.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
+    const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
+
+    if (isHorizontal.current === null && (dx > 5 || dy > 5)) {
+      isHorizontal.current = dx > dy;
+    }
+
+    // If horizontal swipe → prevent page scroll so slider catches it
+    if (isHorizontal.current) {
+      e.stopPropagation();
+    }
+    // If vertical → do nothing, let the page scroll naturally
+  };
+
   const products = [
     { name: "HDPE Pipes", image: "/HDPE Pipes.png", desc: "مواسير البولي إيثيلين عالي الكثافة لشبكات المياه والصرف." },
     { name: "UPVC Pipes", image: "/UPVC Pipes.png", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
@@ -25,7 +52,12 @@ export default function Products() {
           </a>
         </div>
 
-        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto snap-x snap-mandatory pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div
+          ref={scrollRef}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto snap-x snap-mandatory pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] overscroll-x-contain"
+        >
           {products.map((item, idx) => (
             <motion.div 
               key={idx}

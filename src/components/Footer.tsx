@@ -62,10 +62,20 @@ export default function Footer() {
           
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-bold">
-          <p>© {new Date().getFullYear()} شركة الفتح للتوكيلات التجارية والتوريدات. جميع الحقوق محفوظة.</p>
-          <div className="flex gap-4">
+        <div className="border-t border-white/10 pt-8 flex flex-col items-center gap-3 text-sm text-center">
+          <p className="text-gray-400 font-medium">
+            جميع الحقوق محفوظة لشركة{' '}
+            <a href="https://owlmedia-agency.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors font-bold">
+              Owl Media
+            </a>
+            {' '}© {new Date().getFullYear()} — تصميم وتطوير{' '}
+            <a href="https://owlmedia-agency.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors font-bold">
+              Owl Media Agency
+            </a>
+          </p>
+          <div className="flex gap-4 items-center text-gray-500">
             <a href="#" className="hover:text-white transition-colors">سياسة الخصوصية</a>
+            <span className="text-white/20">|</span>
             <a href="#" className="hover:text-white transition-colors">الشروط والأحكام</a>
           </div>
         </div>
