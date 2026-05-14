@@ -30,10 +30,10 @@ export default function Products() {
   };
 
   const products = [
-    { name: "HDPE Pipes", image: "/HDPE Pipes.png", desc: "مواسير البولي إيثيلين عالي الكثافة لشبكات المياه والصرف." },
-    { name: "UPVC Pipes", image: "/UPVC Pipes.png", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
-    { name: "CPVC Pipes", image: "/CPVC Pipes.png", desc: "خطوط التغذية الساخنة وتطبيقات الصناعة الكيماوية." },
-    { name: "Infrastructure Materials", image: "/Infrastructure Materials.png", desc: "تشكيلة متكاملة من المحابس، الفلنشات، والوصلات المعتمدة." }
+    { name: "HDPE Pipes", image: "/HDPE Pipes.png", desc: "مواسير البولي إيثيلين عالي الكثافة" },
+    { name: "PPH Pipes", image: "/UPVC Pipes.png", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
+    { name: "UPVC Pipes", image: "/CPVC Pipes.png", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
+    { name: "نواكل الفتح", image: "/img19.jpg", desc: "تشكيلة متكاملة من الوصلات، النواكل، والتجهيزات الصناعية المعتمدة لجميع تطبيقات الضغط والتوصيل." }
   ];
 
   return (
