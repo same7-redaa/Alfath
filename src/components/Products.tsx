@@ -30,11 +30,11 @@ export default function Products() {
   };
 
   const products = [
-    { name: "HDPE Pipes", image: "https://www.jiashangpipe.com/wp-content/uploads/2024/05/hdpe2-1.jpg", desc: "مواسير البولي إيثيلين عالي الكثافة" },
-    { name: "PPH Pipes", image: "https://i.pinimg.com/736x/62/81/54/628154d86bfa1735ea22904e927977dd.jpg", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
-    { name: "UPVC Pipes", image: "https://i.pinimg.com/1200x/d5/0d/fa/d50dfaaede0a5a5ae8bdb47ef53b2a06.jpg", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
-    { name: "PPR Pipes", image: "https://i.pinimg.com/736x/d0/2a/a2/d02aa2e1799f67516ca73e3c8712aebd.jpg", desc: "مواسير وقطع تركيب لشبكات المياه وتغذية المباني." },
-    { name: "GAZ Pipes", image: "https://i.pinimg.com/736x/74/2c/b6/742cb66a02d0cbcd3b2cf4b25d78692d.jpg", desc: "أنظمة مواسير ووصلات متخصصة لشبكات الغاز." },
+    { name: "HDPE Pipes - شركة GM", image: "https://www.jiashangpipe.com/wp-content/uploads/2024/05/hdpe2-1.jpg", desc: "مواسير البولي إيثيلين عالي الكثافة من شركة GM" },
+    { name: "PPH Pipes - شركة GM", image: "https://i.pinimg.com/736x/62/81/54/628154d86bfa1735ea22904e927977dd.jpg", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي من شركة GM." },
+    { name: "UPVC Pipes - شركة GM", image: "https://i.pinimg.com/1200x/d5/0d/fa/d50dfaaede0a5a5ae8bdb47ef53b2a06.jpg", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي من شركة GM." },
+    { name: "PPR Pipes - شركة GM", image: "https://i.pinimg.com/736x/d0/2a/a2/d02aa2e1799f67516ca73e3c8712aebd.jpg", desc: "مواسير وقطع تركيب لشبكات المياه وتغذية المباني من شركة GM." },
+    { name: "GAZ Pipes - شركة GM", image: "https://i.pinimg.com/736x/74/2c/b6/742cb66a02d0cbcd3b2cf4b25d78692d.jpg", desc: "أنظمة مواسير ووصلات متخصصة لشبكات الغاز من شركة GM." },
     { name: "نواكل الفتح", image: "https://i.postimg.cc/Jrqs5s98/img23.jpg", desc: "تشكيلة متكاملة من الوصلات، النواكل، والتجهيزات الصناعية المعتمدة." }
   ];
 
@@ -44,7 +44,10 @@ export default function Products() {
         
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-base font-bold text-accent uppercase tracking-widest mb-3 text-white/80">التوريدات</h2>
+            <div className="flex items-center gap-3 mb-3">
+              <h2 className="text-base font-bold text-accent uppercase tracking-widest">التوريدات</h2>
+              <span className="bg-accent/20 text-accent text-xs font-bold px-3 py-1 rounded-full border border-accent/30">جميع المنتجات من إنتاج شركة GM</span>
+            </div>
             <h3 className="text-4xl md:text-6xl font-black font-display leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-silver drop-shadow-md py-1">
               قطاع المنتجات الصناعية
             </h3>
