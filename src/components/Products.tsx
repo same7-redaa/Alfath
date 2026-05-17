@@ -30,10 +30,12 @@ export default function Products() {
   };
 
   const products = [
-    { name: "HDPE Pipes", image: "/HDPE Pipes.png", desc: "مواسير البولي إيثيلين عالي الكثافة" },
-    { name: "PPH Pipes", image: "/UPVC Pipes.png", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
-    { name: "UPVC Pipes", image: "/CPVC Pipes.png", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
-    { name: "نواكل الفتح", image: "/img19.jpg", desc: "تشكيلة متكاملة من الوصلات، النواكل، والتجهيزات الصناعية المعتمدة لجميع تطبيقات الضغط والتوصيل." }
+    { name: "HDPE Pipes", image: "https://www.jiashangpipe.com/wp-content/uploads/2024/05/hdpe2-1.jpg", desc: "مواسير البولي إيثيلين عالي الكثافة" },
+    { name: "PPH Pipes", image: "https://i.pinimg.com/736x/62/81/54/628154d86bfa1735ea22904e927977dd.jpg", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
+    { name: "UPVC Pipes", image: "https://i.pinimg.com/1200x/d5/0d/fa/d50dfaaede0a5a5ae8bdb47ef53b2a06.jpg", desc: "مواسير وقطع تركيب للصرف الصحي الداخلي والخارجي." },
+    { name: "PPR Pipes", image: "https://i.pinimg.com/736x/d0/2a/a2/d02aa2e1799f67516ca73e3c8712aebd.jpg", desc: "مواسير وقطع تركيب لشبكات المياه وتغذية المباني." },
+    { name: "GAZ Pipes", image: "https://i.pinimg.com/736x/74/2c/b6/742cb66a02d0cbcd3b2cf4b25d78692d.jpg", desc: "أنظمة مواسير ووصلات متخصصة لشبكات الغاز." },
+    { name: "نواكل الفتح", image: "https://i.postimg.cc/Jrqs5s98/img23.jpg", desc: "تشكيلة متكاملة من الوصلات، النواكل، والتجهيزات الصناعية المعتمدة." }
   ];
 
   return (

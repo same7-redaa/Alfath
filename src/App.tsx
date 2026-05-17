@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import NationalProjects from './components/NationalProjects';
 import TrustedBy from './components/TrustedBy';
+import RealEstate from './components/RealEstate';
 import Services from './components/Services';
 import Certifications from './components/Certifications';
 import WhyUs from './components/WhyUs';
@@ -16,6 +17,7 @@ import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
+import AboutUs from './components/AboutUs';
 import { motion, AnimatePresence } from 'motion/react';
 
 function AnimatedSection({ children }: { children: React.ReactNode }) {
@@ -73,8 +75,10 @@ export default function App() {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <AnimatedSection><AboutUs /></AnimatedSection>
         <AnimatedSection><NationalProjects /></AnimatedSection>
         <AnimatedSection><TrustedBy /></AnimatedSection>
+        <AnimatedSection><RealEstate /></AnimatedSection>
         <AnimatedSection><Services /></AnimatedSection>
         <AnimatedSection><Certifications /></AnimatedSection>
         <AnimatedSection><WhyUs /></AnimatedSection>

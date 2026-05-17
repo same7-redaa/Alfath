@@ -53,6 +53,7 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#home" className="text-gray-200 hover:text-accent transition-colors text-sm font-bold uppercase tracking-wider">الرئيسية</a>
+            <a href="#about" className="text-gray-200 hover:text-accent transition-colors text-sm font-bold uppercase tracking-wider">من نحن</a>
             <a href="#projects" className="text-gray-200 hover:text-accent transition-colors text-sm font-bold uppercase tracking-wider">مشروعاتنا</a>
             <a href="#services" className="text-gray-200 hover:text-accent transition-colors text-sm font-bold uppercase tracking-wider">خدماتنا</a>
             <a href="#certs" className="text-gray-200 hover:text-accent transition-colors text-sm font-bold uppercase tracking-wider">الاعتمادات</a>
@@ -92,6 +93,7 @@ export default function Header() {
         >
           <div className="flex flex-col gap-4 text-center">
             <a href="#home" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-accent py-2 font-bold border-b border-white/5">الرئيسية</a>
+            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-accent py-2 font-bold border-b border-white/5">من نحن</a>
             <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-accent py-2 font-bold border-b border-white/5">مشروعاتنا القومية</a>
             <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-accent py-2 font-bold border-b border-white/5">خدماتنا</a>
             <a href="#certs" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-accent py-2 font-bold border-b border-white/5">الاعتمادات</a>
