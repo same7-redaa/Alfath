@@ -3,11 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import NationalProjects from './components/NationalProjects';
-import TrustedBy from './components/TrustedBy';
 import RealEstate from './components/RealEstate';
 import Services from './components/Services';
 import Certifications from './components/Certifications';
@@ -77,7 +76,6 @@ export default function App() {
         <Hero />
         <AnimatedSection><AboutUs /></AnimatedSection>
         <AnimatedSection><NationalProjects /></AnimatedSection>
-        <AnimatedSection><TrustedBy /></AnimatedSection>
         <AnimatedSection><RealEstate /></AnimatedSection>
         <AnimatedSection><Services /></AnimatedSection>
         <AnimatedSection><Certifications /></AnimatedSection>

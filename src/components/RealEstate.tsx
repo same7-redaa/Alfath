@@ -8,6 +8,9 @@ export default function RealEstate() {
     { name: "ماونتن فيو", logo: "https://tse2.mm.bing.net/th/id/OIP.qmqkefBMeZOUlXajm4hGFQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "أربا العقارية", logo: "https://arbarealestate.com/site/images/logo.png" },
     { name: "A and M International", logo: "https://images.wuzzuf-data.net/files/company_logo/13443802506571b09180c73.jpeg" },
+    { name: "شريك نجاح", logo: "https://tse4.mm.bing.net/th/id/OIP.nBSfj6ws176qJOkLCdQPBwHaHa?cb=thfc1falcon&rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { name: "شريك نجاح", logo: "https://i.postimg.cc/fRG8t5d3/Chat-GPT-Image-May-23-2026-12-08-53-AM.png" },
+    { name: "شريك نجاح", logo: "https://i.postimg.cc/pdPn6Fbs/Chat-GPT-Image-May-23-2026-12-11-29-AM.png" },
   ];
 
   return (
