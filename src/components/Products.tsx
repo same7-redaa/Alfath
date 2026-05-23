@@ -61,7 +61,7 @@ export default function Products() {
           ref={scrollRef}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
-          className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto snap-x snap-mandatory pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] overscroll-x-contain"
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] overscroll-x-contain"
         >
           {products.map((item, idx) => (
             <motion.div 
@@ -70,37 +70,22 @@ export default function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="min-w-[46vw] sm:min-w-[300px] md:min-w-0 shrink-0 snap-center snap-always group auto-hover-group flex flex-col bg-gradient-to-br from-white/10 to-white/5 border border-white/10 hover:border-accent/40 rounded-2xl sm:rounded-3xl p-3 sm:p-6 h-[340px] sm:h-[430px] relative overflow-hidden backdrop-blur-md shadow-2xl hover:shadow-[0_20px_50px_rgba(0,123,255,0.25)] data-[hovered=true]:shadow-[0_20px_50px_rgba(0,123,255,0.25)] transition-all duration-500 cursor-pointer"
+              className="min-w-[75vw] sm:min-w-[300px] md:min-w-0 shrink-0 snap-center snap-always group auto-hover-group relative overflow-hidden rounded-xl bg-secondary aspect-[4/5] cursor-pointer transform-gpu"
             >
-              {/* Futuristic Glowing Backdrop Orb */}
-              <div className="absolute top-10 left-1/2 -translate-x-1/2 w-44 h-44 bg-accent/20 rounded-full blur-[45px] opacity-0 group-hover:opacity-100 group-data-[hovered=true]:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+              <img 
+                src={item.image} 
+                alt={item.name} 
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-data-[hovered=true]:scale-110 opacity-70 group-hover:opacity-40 group-data-[hovered=true]:opacity-40 grayscale group-hover:grayscale-0 group-data-[hovered=true]:grayscale-0 transform-gpu will-change-transform"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
               
-              {/* Product Floating Image Container */}
-              <div className="w-full h-[130px] sm:h-[210px] flex items-center justify-center relative z-10 mb-3 sm:mb-4 rounded-xl sm:rounded-2xl overflow-hidden bg-black/10">
-                <img 
-                  src={item.image} 
-                  alt={item.name} 
-                  className={`w-full h-full object-cover rounded-xl sm:rounded-2xl drop-shadow-[0_15px_35px_rgba(255,255,255,0.15)] group-hover:scale-110 group-data-[hovered=true]:scale-110 group-hover:-translate-y-3 group-data-[hovered=true]:-translate-y-3 transition-all duration-500 ease-out transform-gpu will-change-transform ${item.rotate ? 'rotate-90 scale-[1.45] group-hover:scale-[1.6] group-data-[hovered=true]:scale-[1.6]' : ''}`} 
-                />
-              </div>
-
-              {/* Product Info Container */}
-              <div className="relative z-10 flex flex-col flex-grow justify-between mt-1 sm:mt-2">
-                <div>
-                  <h4 className="text-sm sm:text-xl font-bold mb-1 sm:mb-2 text-white font-display leading-snug tracking-wide group-hover:text-accent group-data-[hovered=true]:text-accent transition-colors duration-300">
-                    {item.name}
-                  </h4>
-                  <p className="text-gray-300 text-[10px] sm:text-xs md:text-sm leading-relaxed font-medium line-clamp-2 sm:line-clamp-3 group-hover:text-white transition-colors duration-300">
+              <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                <div className="translate-y-8 group-hover:translate-y-0 group-data-[hovered=true]:translate-y-0 transition-transform duration-300">
+                  <h4 className="text-2xl font-bold mb-2 text-white font-display uppercase tracking-wider">{item.name}</h4>
+                  <div className="h-1 w-12 bg-accent mb-4 opacity-0 group-hover:opacity-100 group-data-[hovered=true]:opacity-100 transition-opacity duration-300"></div>
+                  <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 group-data-[hovered=true]:opacity-100 transition-opacity duration-300 delay-100 leading-relaxed font-medium">
                     {item.desc}
                   </p>
-                </div>
-                
-                {/* Premium Interactive Trigger */}
-                <div className="flex items-center justify-between border-t border-white/10 pt-3 sm:pt-4 mt-auto">
-                  <span className="text-accent font-bold text-[10px] sm:text-xs tracking-wider group-hover:underline group-data-[hovered=true]:underline">طلب التفاصيل</span>
-                  <div className="bg-white/10 p-1.5 sm:p-2 rounded-full text-accent group-hover:bg-accent group-hover:text-primary group-data-[hovered=true]:bg-accent group-data-[hovered=true]:text-primary transition-all duration-300">
-                    <ArrowLeft size={14} />
-                  </div>
                 </div>
               </div>
             </motion.div>
